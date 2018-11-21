@@ -1,2 +1,2 @@
-# convert-title-intto-slug-in-javascript
+# convert-title-into-slug-in-javascript
 Convert title into slug field using javascript
