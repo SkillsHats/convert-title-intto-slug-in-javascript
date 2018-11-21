@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Convert title into Slug </title>
+</head>
+<body>
+  <form>
+    <input type="text" name="title" id="title"><br>
+    <input type="text" name="slug" id="slug">
+  </form>
+  
+  <script>
+  
+    // Method 1:
+     function convertToSlug(Text) {
+            return Text
+                .toLowerCase()
+                .replace(/ /g,'-')
+                .replace(/[^\w-]+/g,'')
+                ;
+     }
+     
+     
+    // Method 2:
+    function convertToSlug(Text) {
+        return Text
+            .toLowerCase()
+            .replace(/[^\w ]+/g,'')
+            .replace(/ +/g,'-')
+            ;
+    }
+    
+    let title = document.getElementById('title');
+    let slug  = document.getElementById('slug');
+    
+    title.onkeyup = function() {slugFun()};
+
+    function slugFun() {
+        slug.value = convertToSlug(title.value);
+    }
+    
+  </script>
+</body>
+</html>
